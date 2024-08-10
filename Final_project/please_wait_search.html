@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<br>
+    <form action="/search" method="post" name="auto_submit">
+        <p>
+            <h2>Please wait, the results will be displayed soon (1-25 min.)</h2>
+        </p>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="star" placeholder="Pick a star" type="text" value="{{star}}" readonly>
+        </div>
+    </form>
+{% block javascript %}
+
+<script>
+    function ReSend() {
+        document.auto_submit.submit();
+    }
+    window.setTimeout("ReSend()", 60000);
+</script>
+{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <br>
+    <form action="/search" method="post">
+        <p>
+            Please add the birth year!
+        </p>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="star" placeholder="Pick a star" value="{{star}}" type="text" readonly>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="birth" placeholder="birth" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Find the Bacon!</button>
+    </form>
+{% endblock %}

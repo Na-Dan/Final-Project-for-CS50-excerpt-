@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    {% if degree == 0 %}
+        <h2>Sorry, this program is not suited for searching the connection of <br> {{initial_star}} to Kevin Bacon. <br> Try a different star.</h2>
+    {% else %}
+        <h2>{{initial_star}} has a Kevin Bacon degree of {{degree}}</h2>
+        <br>
+        {% for i in pretty_results %}
+        <p>
+            {% for key, value in i.items()%}
+            <h3>{{value[0]}} played in "{{value[1]}}" with {{key}}.</h3>
+            {% endfor %}
+        </p>
+        {% endfor %}
+
+    {% endif %}
+
+
+{% endblock %}

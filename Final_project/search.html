@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <p>
+        <br>
+    </p>
+    <form action="/search" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="star" placeholder="Pick a star" type="text">
+        </div>
+        <div class="container">
+            <div class="center">
+                <button class="btn btn-primary" type="submit">Find the Bacon!</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
